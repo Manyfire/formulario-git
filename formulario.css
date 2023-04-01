@@ -1,0 +1,189 @@
+html{
+  box-sizing: border-box;
+  font-size: 62.2%;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+body{
+  background-color: rgb(235, 206, 110);
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+/*--------- MAIN---------*/
+main{
+  width: 90%;
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 10px 40px;
+  border: 2px solid #035f22;
+  box-shadow: 0px 2px 10px #035f22;
+  background: #222;
+  color: white;
+}
+/*--------- FORMULARIO---------*/
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.formulario_label {
+  display: block;
+  padding: 10px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.formulario_grupo_input {
+  position: relative;
+}
+
+.formulario_input{
+ width: 90%; 
+ background: transparent;
+ border-bottom: 2px solid  #035f22;
+ border-right: none;
+ color: white;
+ font-size: 1.6rem;
+ outline: none;
+ line-height: 30px;
+ padding: 0, 10px;
+ transition: all 0.4s;
+ margin: 0 auto;
+}
+
+.formulario_input:focus{
+  box-shadow: 0 0 5px #035f22;
+}
+
+.formulario_validacion_estado{
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  font-size: 1.4rem;
+  opacity: 0;/*para aparecer= 0 y desaparecer= 1*/
+  z-index: 1000;
+}
+
+.formulario_input-error{
+  margin-bottom: 0;
+  display: none;
+}
+
+.formulario_input_error_activo{
+  /* esta class es solo para cuando vamos a trabajar en javascript*/
+  display: block;
+}
+
+.formulario_span {
+ font-size: 1.1em; 
+ font-weight: 100;
+}
+
+.formulario_checkbox {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 10px;
+}
+
+.formulario_grupo-terminos {
+  text-align: center;
+}
+
+.formulario_grupo-terminos, .formulario_mensaje, .formulario_grupo-btn-enviar {
+  grid-column: span 2;
+}
+
+.formulario_mensaje {
+  display: none;
+  padding: 10px;
+  text-align: center;
+  background: red;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.formulario_mensaje-exito {
+  display: block;
+}
+
+.formulario_grupo-btn-enviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario_btn {
+  padding: 10px 25px;
+  background: rgb(156, 161, 48);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.formulario_btn:hover {
+  background: #035f22;
+  transition: background 0.5s;
+}
+
+.formulario_mensaje-exito {
+  display: none;
+  font-size: 2em;
+  color: whitesmoke;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.formulario_validacion_estado,
+.formulario_mensaje-exito-activo, 
+.formulario_input_error_activo {
+  display: block;
+}
+/*--------- VALIDACIONES---------*/
+.formulario_grupo-correcto
+.formulario_validacion-estado {
+  color: #035f22;
+  opacity: 1;
+}
+
+.formulario_grupo-incorrecto
+.formulario_label {
+  color: red;
+}
+
+.formulario_grupo-incorrecto 
+.formulario_validacion-estado {
+ color: red;
+ opacity: 1;
+}
+
+.formulario_grupo-incorrecto
+.formulario_input {
+  border: 1px solid red;
+}
+
+/*--------- REPONSIVE---------*/
+@media screen and (max-width: 720px) {
+  .formulario {
+      grid-template-columns: 1fr;
+  }
+
+  .formulario_grupo-terminos,
+  .formulario_mensaje,
+  .formulario_grupo-btn-enviar {
+      grid-column: 1;
+  }
+
+  .formulario {
+      width: 100%;
+  }
+}
+
+
