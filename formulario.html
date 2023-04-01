@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <script defer src="formulario.js"></script>
+    <script src="https://kit.fontawesome.com/73f851add2.js"></script>
+    <title>FORMULARIO</title>
+</head>
+<body>
+  <main>
+    <!--FORMULARIO-->
+     <form action="#" class="formulario" id="formulario">
+      <!--GRUPO DEL USUARIO-->
+      <div class="formulario_grupo" id="grupo_usuario">
+        <label class="fromulario_label">Nombre del usuario
+          <i class="fa-sharp fa-solid fa-circle-check formulario_validacion_estado "></i>
+        </label>
+        <div class="formulario_grupo_input">
+          <input class="formulario_input" type="text" name="usuario" id="usuario" placeholder="Osmany">
+          <i class=" fa-solid fa-user"></i>
+        </div>
+        <p class="formulario_input-error">El usuario deve tener minimo 4 caracteres con numeros, letras y guiones bajos</p>
+      </div>
+     
+     <!--GRUPO NOMBRE-->
+     <div class="formulario_grupo" id="grupo_nombre">
+      <label class="fromulario_label">Apellidos del usuario
+        <i class="fa-sharp fa-solid fa-circle-check formulario_validacion_estado "></i>
+      </label>
+      <div class="formulario_grupo_input">
+        <input class="formulario_input" type="text" name="nombre" id="nombre" placeholder=" Toledo">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <p class="formulario_input-error">El usuario deve tener minimo 4 caracteres con numeros, letras y guiones bajos</p>
+    </div>
+    <!--GRUPO PASSWORD 1-->
+    <div class="formulario_grupo" id="grupo_password">
+      <label class="fromulario_label">Password <i class="fa-sharp fa-solid fa-circle-check formulario_validacion_estado "></i></label>
+      <div class="formulario_grupo_input">
+        <input class="formulario_input" type="password" name="password" id="password">
+        <i class=" fa-solid fa-gear fa-rotate-180"></i>
+      </div>
+      <p class="formulario_input-error">le password deve ser de 4 a 12 digitos</p>
+    </div>
+    <!--GRUPO PASSWORD 2-->
+    <div class="formulario_grupo" id="grupo_password2">
+      <label class="fromulario_label">Repetir le Password <i class="fa-sharp fa-solid fa-circle-check formulario_validacion_estado "></i></label>
+      <div class="formulario_grupo_input">
+        <input class="formulario_input" type="password" name="password2" id="password2">
+        <i class=" fa-solid fa-gear fa-rotate-180"></i>
+      </div>
+      <p class="formulario_input-error">le password No es Correcto</p>
+    </div>
+     <!--GRUPO E-MAIL-->
+      <div class="formulario_grupo" id="grupo_email">
+        <label class="fromulario_label">E-mail <i class="fa-sharp fa-solid fa-circle-check formulario_validacion_estado "></i></label>
+        <div class="formulario_grupo_input">
+          <input class="formulario_input" type="email" name="email" id="email" placeholder="manytoledo@corses.com">
+          <i class=" fa-solid fa-envelope"></i>
+        </div>
+        <p class="formulario_input-error">El e-mail deve tener minimo 4 caracteres con numeros, letras y guiones bajos</p>
+      </div>
+      <!--GRUPO TELEPHONE-->
+      <div class="formulario_grupo" id="grupo_telephone">
+        <label class="fromulario_label">Telephone <i class="fa-sharp fa-solid fa-circle-check formulario_validacion_estado "></i></label>
+        <div class="formulario_grupo_input">
+          <input class="formulario_input" type="tel" name="telephone" id="telephone" placeholder="(514) 710 2577">
+          
+          <i class="fa-solid fa-phone fa-rotate-180"></i>
+        </div>
+        <p class="formulario_input-error">Il doit avoir 10 digites</p>
+      </div>
+      <!--GRUPO TERMINOS Y CONDICIONES-->
+      <div class="formulario_grupo formulario_grupo-terminos" id="grupo_terminos">
+        <label class="fromulario_label">
+          <input type="checkbox" class="formulario_checkbox" name="terminos" id="terminos">
+          <b class="formulario_span">Acepto los terminos y condiciones</b>
+        </label>
+      </div>
+      <!--MENSAJE DE CAMPO REQUERIDOS-->
+      <div class="formulario_mensaje" id="formulario_mensaje">
+        <p><i class="fa-sharp fa-solid fa-circle-exclamation "></i><b> Error:</b> Deves completar todos los campos</p>
+      </div>
+      <!--GRUPO ENVIAR-->
+      <div class="formulario_grupo formulario_grupo-btn-enviar" >
+        
+        <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">El formulario se envio <i class="fa-sharp fa-solid fa-circle-check formulario_validacion_estado "></i></p>
+        <input class="formulario_btn" type="submit" value="Enviar">
+      </div>
+    </form>
+  </main>
+    
+</body>
+</html>
